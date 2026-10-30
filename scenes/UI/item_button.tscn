@@ -22,3 +22,11 @@ grow_horizontal = 0
 grow_vertical = 0
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="HoldTimer" type="Timer" parent="." unique_id=1952871896]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="timeout" from="HoldTimer" to="." method="_on_hold_timer_timeout"]
