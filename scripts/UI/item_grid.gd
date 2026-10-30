@@ -7,9 +7,3 @@ func _ready() -> void:
 	for item in FileManagement.items:
 		var butt : ItemButton = ItemButton.new_item_button(item)
 		add_child(butt)
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
