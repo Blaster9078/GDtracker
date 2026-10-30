@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bcmvaq7x70f6"]
+
+[ext_resource type="Script" uid="uid://ctfahwg60euk" path="res://scripts/UI/item_grid.gd" id="1_bw3vb"]
+
+[node name="Board" type="Control" unique_id=673581888]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2133645575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=982922190]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer" unique_id=1470476219]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=286532016]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=1647108810]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/MarginContainer2/HBoxContainer" unique_id=1072562391]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Items" type="GridContainer" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer" unique_id=197505124]
+layout_mode = 2
+columns = 4
+script = ExtResource("1_bw3vb")
+
+[node name="Button5" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/Items" unique_id=177420827]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/Items" unique_id=1497247026]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/Items" unique_id=1588035558]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/Items" unique_id=1762045170]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="VBoxContainer/MarginContainer2/HBoxContainer/MarginContainer/Items" unique_id=1932395079]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2

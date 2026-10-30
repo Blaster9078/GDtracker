@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://q31an0q1tgja"]
+
+[ext_resource type="Script" uid="uid://bf5jo04kmgu4k" path="res://scripts/UI/path_option.gd" id="1_s1566"]
+
+[node name="PathOption" type="HBoxContainer" unique_id=928663132]
+script = ExtResource("1_s1566")
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=1642650659]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+display_mode = 1
+access = 2
+
+[node name="FileName" type="Label" parent="." unique_id=1125344429]
+layout_mode = 2
+text = "Placeholder"
+horizontal_alignment = 1
+
+[node name="PathLine" type="LineEdit" parent="." unique_id=131937167]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="SelectFileButton" type="Button" parent="." unique_id=387626587]
+layout_mode = 2
+text = "Select"
+
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="text_changed" from="PathLine" to="." method="_on_path_line_text_changed"]
+[connection signal="pressed" from="SelectFileButton" to="." method="_on_select_file_button_pressed"]

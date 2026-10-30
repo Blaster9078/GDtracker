@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://c5glo45eiicjq"]
+
+[ext_resource type="Script" uid="uid://cygwnl8mjdly4" path="res://scripts/UI/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://q31an0q1tgja" path="res://scenes/UI/path_option.tscn" id="1_o5qli"]
+
+[node name="BootUpMenu" type="Control" unique_id=317471722]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0wfyh")
+
+[node name="TextureRect" type="ColorRect" parent="." unique_id=1439513758]
+custom_minimum_size = Vector2(512, 256)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -32.0
+offset_right = 128.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.38928655, 0.38928664, 0.38928658, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=1706420806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect/VBoxContainer" unique_id=1551134251]
+layout_mode = 2
+text = "Load tracker pack"
+horizontal_alignment = 1
+
+[node name="ImgPath" parent="TextureRect/VBoxContainer" unique_id=928663132 instance=ExtResource("1_o5qli")]
+layout_mode = 2
+
+[node name="FileDialog" parent="TextureRect/VBoxContainer/ImgPath" index="0" unique_id=1642650659]
+display_mode = 0
+filters = PackedStringArray("*.png")
+
+[node name="FileName" parent="TextureRect/VBoxContainer/ImgPath" index="1" unique_id=1125344429]
+text = "Load image"
+
+[node name="ItemPath" parent="TextureRect/VBoxContainer" unique_id=1267587175 instance=ExtResource("1_o5qli")]
+layout_mode = 2
+
+[node name="FileDialog" parent="TextureRect/VBoxContainer/ItemPath" index="0" unique_id=1642650659]
+filters = PackedStringArray("*.json")
+
+[node name="FileName" parent="TextureRect/VBoxContainer/ItemPath" index="1" unique_id=1125344429]
+text = "Load Items"
+
+[node name="ChecksPath" parent="TextureRect/VBoxContainer" unique_id=117994769 instance=ExtResource("1_o5qli")]
+layout_mode = 2
+
+[node name="FileDialog" parent="TextureRect/VBoxContainer/ChecksPath" index="0" unique_id=1642650659]
+filters = PackedStringArray("*.json")
+
+[node name="FileName" parent="TextureRect/VBoxContainer/ChecksPath" index="1" unique_id=1125344429]
+text = "Load checks"
+
+[node name="LoadButton" type="Button" parent="TextureRect/VBoxContainer" unique_id=1460076245]
+layout_mode = 2
+text = "Load"
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/LoadButton" to="." method="_on_load_button_pressed"]
+
+[editable path="TextureRect/VBoxContainer/ImgPath"]
+[editable path="TextureRect/VBoxContainer/ItemPath"]
+[editable path="TextureRect/VBoxContainer/ChecksPath"]
