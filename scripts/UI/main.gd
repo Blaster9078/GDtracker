@@ -31,5 +31,4 @@ func _on_load_button_pressed() -> void:
 		print("File doesn't exist")
 		return
 	FileManagement.load_items(item_path.file_path)
-		
-	pass # Replace with function body.
+	SceneManagement.change_scene("res://scenes/board.tscn")
