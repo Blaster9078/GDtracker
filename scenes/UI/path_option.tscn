@@ -7,9 +7,9 @@ script = ExtResource("1_s1566")
 
 [node name="FileDialog" type="FileDialog" parent="." unique_id=1642650659]
 oversampling_override = 1.0
-title = "Open a File"
+title = "Open a Directory"
 position = Vector2i(0, 36)
-file_mode = 0
+file_mode = 2
 display_mode = 1
 access = 2
 
