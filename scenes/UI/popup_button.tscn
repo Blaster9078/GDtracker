@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bj4m2gc5qb67n"]
+
+[ext_resource type="Script" uid="uid://rbwfqannyv1" path="res://scripts/UI/popup_button.gd" id="1_qu2bg"]
+
+[node name="PopupButton" type="Button" unique_id=1780524924]
+custom_minimum_size = Vector2(64, 16)
+text = "Ok"
+script = ExtResource("1_qu2bg")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
