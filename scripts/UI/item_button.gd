@@ -7,6 +7,7 @@ const self_scene = preload("uid://c01sxensnjro4")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	item_reference.level_changed.connect(update_level)
+	attempt_image_load()
 	$Levels.text = "0"
 
 
@@ -18,6 +19,14 @@ static func new_item_button(ref : TrackerItem)-> ItemButton:
 func update_level()->void:
 	$Levels.text = String.num_int64(item_reference.item_levels)
 
+func attempt_image_load()->void:
+	var icon_path : String = FileManagement.path + "/icons/"
+	var pic : Image = Image.new()
+	var err = pic.load(icon_path+item_reference.item_name+".png")
+	if err != OK:
+		print(err)
+	icon = ImageTexture.create_from_image(pic)
+	pass
 
 func _on_button_down() -> void:
 	$HoldTimer.start(0.5)

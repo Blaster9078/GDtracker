@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cnd51qbl3uucd" path="res://scripts/UI/item_button.gd" id="1_tpjdi"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_i6x8t"]
-
 [node name="ItemButton" type="Button" unique_id=1059819947]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 8.0
 offset_bottom = 8.0
-icon = SubResource("ImageTexture_i6x8t")
+icon_alignment = 1
+expand_icon = true
 script = ExtResource("1_tpjdi")
 
 [node name="Levels" type="Label" parent="." unique_id=796189248]
