@@ -1,4 +1,5 @@
 extends Node
+var path : String
 var image : ImageTexture
 var items : Array
 var checks : Array
