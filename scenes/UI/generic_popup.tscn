@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bp8a47gvi52jn"]
+
+[ext_resource type="Script" uid="uid://cdl38uxotksbj" path="res://scripts/UI/generic_popup.gd" id="1_kims2"]
+
+[node name="GenericPopup" type="Window" unique_id=488628983]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(640, 100)
+script = ExtResource("1_kims2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=82362564]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=718809309]
+layout_mode = 2
+text = "Placeholder"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1696688062]
+layout_mode = 2
+
+[node name="PopupOptions" type="HBoxContainer" parent="VBoxContainer/MarginContainer" unique_id=1090903675]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
