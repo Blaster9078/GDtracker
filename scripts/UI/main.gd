@@ -1,34 +1,35 @@
 extends Control
 
-@onready var img_path: HBoxContainer = $TextureRect/VBoxContainer/ImgPath
-@onready var item_path: HBoxContainer = $TextureRect/VBoxContainer/ItemPath
-@onready var checks_path: HBoxContainer = $TextureRect/VBoxContainer/ChecksPath
+@export var pack_path: HBoxContainer
 const ITEM_MISSING_POPUP = preload("uid://dudl65pk6vyp8")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_load_button_pressed() -> void:
-	if not item_path.file_path:
+	if not pack_path.file_path:
 		print("Item field not set")
-		var pop = ITEM_MISSING_POPUP.instantiate()
+		var pop = GenericPopup.new_popup("Field Not Set",[["Ok", 0]])
 		add_child(pop)
 		return 
-	elif not item_path.file_path.is_absolute_path():
+	elif not pack_path.file_path.is_absolute_path():
+		var pop = GenericPopup.new_popup("Path not absolute",[["Ok", 0]])
+		add_child(pop)
 		print("File path not absolute")
 		return
-	elif item_path.file_path.get_extension() != "json":
-		print("File is not json")
-		return
-	elif not FileAccess.file_exists(item_path.file_path):
+	FileManagement.path = pack_path.file_path
+	var item_path = FileManagement.path + "/items.json"
+	print(item_path)
+	#elif item_path.file_path.get_extension() != "json":
+		#print("File is not json")
+		#return
+	
+	if not FileAccess.file_exists(item_path):
+		var pop = GenericPopup.new_popup("items.json not found",[["Ok", 0]])
+		add_child(pop)
 		print("File doesn't exist")
 		return
-	FileManagement.load_items(item_path.file_path)
+	FileManagement.load_items(item_path)
 	SceneManagement.change_scene("res://scenes/board.tscn")
+
+func import_items()->void:
+	pass
