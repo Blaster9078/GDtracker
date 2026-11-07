@@ -1,6 +1,5 @@
 extends Node
 var path : String
-var image : ImageTexture
 var items : Array
 var checks : Array
 # Called when the node enters the scene tree for the first time.
