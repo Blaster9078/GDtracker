@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b424rauh7notk"]
+
+[ext_resource type="Script" uid="uid://dixgn48ribj4y" path="res://scripts/UI/check_location_button.gd" id="1_tp3kb"]
+
+[node name="CheckLocationButton" type="CheckBox" unique_id=1925887554]
+custom_minimum_size = Vector2(8, 8)
+anchors_preset = -1
+anchor_left = -0.010416667
+anchor_top = -0.018518519
+anchor_right = 0.010416667
+anchor_bottom = 0.018518519
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_tp3kb")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="toggled" from="." to="." method="_on_toggled"]
