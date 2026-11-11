@@ -4,14 +4,6 @@ var item_name : String = "item"
 var max_item_levels : int = 1
 var item_levels : int = 0
 signal level_changed
-# Called when the node enters the scene tree for the first time.
-#func _ready() -> void:
-	#pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-	#pass
 
 static func new_item(new_name: String, levels: int)->TrackerItem:
 	var item: TrackerItem = TrackerItem.new()
