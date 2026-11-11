@@ -19,9 +19,7 @@ func _on_load_button_pressed() -> void:
 	FileManagement.path = pack_path.file_path
 	var item_path = FileManagement.path + "/items.json"
 	print(item_path)
-	#elif item_path.file_path.get_extension() != "json":
-		#print("File is not json")
-		#return
+
 	
 	if not FileAccess.file_exists(item_path):
 		var pop = GenericPopup.new_popup("items.json not found",[["Ok", 0]])
@@ -29,7 +27,6 @@ func _on_load_button_pressed() -> void:
 		print("File doesn't exist")
 		return
 	FileManagement.load_items(item_path)
+	if FileAccess.file_exists(FileManagement.path + "/checks.json"):
+		FileManagement.load_checks(FileManagement.path + "/checks.json")
 	SceneManagement.change_scene("res://scenes/board.tscn")
-
-func import_items()->void:
-	pass
