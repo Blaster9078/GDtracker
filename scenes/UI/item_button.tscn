@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cnd51qbl3uucd" path="res://scripts/UI/item_button.gd" id="1_tpjdi"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_naeop"]
+font_color = Color(0, 1, 0, 1)
+
 [node name="ItemButton" type="Button" unique_id=1059819947]
 custom_minimum_size = Vector2(64, 64)
 offset_right = 8.0
@@ -19,6 +22,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 0
+text = "0"
+label_settings = SubResource("LabelSettings_naeop")
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
