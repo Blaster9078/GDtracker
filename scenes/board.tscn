@@ -23,6 +23,7 @@ grow_vertical = 2
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=286532016]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2" unique_id=1647108810]
 layout_mode = 2
