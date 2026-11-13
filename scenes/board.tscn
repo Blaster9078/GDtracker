@@ -20,13 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=982922190]
-custom_minimum_size = Vector2(0, 32)
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer/MarginContainer" unique_id=1470476219]
-layout_mode = 2
-
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=286532016]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
@@ -47,5 +40,4 @@ script = ExtResource("1_bw3vb")
 layout_mode = 2
 size_flags_horizontal = 3
 expand_mode = 1
-stretch_mode = 4
 script = ExtResource("2_tx6nw")
