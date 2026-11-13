@@ -1,0 +1,22 @@
+{
+    "checks": [
+    {
+        "name": "Check 1",
+        "x": 91,
+        "y": 87,
+        "requirements": []
+    },
+    {
+        "name": "Check 2",
+        "x": 328,
+        "y": 84,
+        "requirements": ["Item 1"]
+    },
+    {
+        "name": "Check 3",
+        "x": 232,
+        "y": 258,
+        "requirements": ["Item 1","Item 2"]
+    }
+    ]
+}
