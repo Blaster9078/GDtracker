@@ -18,7 +18,6 @@ func _on_load_button_pressed() -> void:
 		return
 	FileManagement.path = pack_path.file_path
 	var item_path = FileManagement.path + "/items.json"
-	print(item_path)
 
 	
 	if not FileAccess.file_exists(item_path):
@@ -26,7 +25,11 @@ func _on_load_button_pressed() -> void:
 		add_child(pop)
 		print("File doesn't exist")
 		return
-	FileManagement.load_items(item_path)
+	if FileManagement.load_items(item_path) !=OK:
+		var pop = GenericPopup.new_popup("items.json failed to load",[["Ok", 0]])
+		add_child(pop)
+		return
 	if FileAccess.file_exists(FileManagement.path + "/checks.json"):
-		FileManagement.load_checks(FileManagement.path + "/checks.json")
+		if FileManagement.load_checks(FileManagement.path + "/checks.json")!=OK:
+			print("checks.json failed to load")
 	SceneManagement.change_scene("res://scenes/board.tscn")

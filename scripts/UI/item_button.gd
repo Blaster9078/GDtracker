@@ -24,7 +24,8 @@ func attempt_image_load()->void:
 	var pic : Image = Image.new()
 	var err = pic.load(icon_path+item_reference.item_name+".png")
 	if err != OK:
-		print(err)
+		print("Image Broken or doesn't exist")
+		return
 	icon = ImageTexture.create_from_image(pic)
 	pass
 
