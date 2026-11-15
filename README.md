@@ -1,5 +1,5 @@
 # GDtracker
-#### Video demo: https://drive.google.com/file/d/16288RFqkprSa7cd9HxNsHe0K8CrR6HIS/view?usp=sharing
+#### Video demo: https://youtu.be/uOzGFTwYMKE
 A Godot based game randomizer item tracker
 ## Instructions
 ### 1.
